@@ -1,0 +1,394 @@
+/* Polices*/
+
+@font-face {
+  font-family: 'bebas';
+  src: url("./Bebas-Regular.otf");
+}
+
+@font-face {
+  font-family: 'helvetica';
+  src: url("./Helvetica.ttf");
+}
+
+body{
+	font-family: 'helvetica';
+	background-image: url("arriere.jpg");
+    background-position: center;
+    background-repeat: repeat; 
+    background-size: cover; 
+    width: 100%;
+    height: 100vh;
+}
+
+#logo{
+	height : 124px;
+	margin-bottom: 10px;
+}
+
+
+h1,h2,h3{
+	font-family: 'bebas';
+}
+
+.image_pokemon{
+    width: 128px;
+    height: fit-content;
+}
+
+#pageInfo{
+color: white;
+}
+
+/* Pokemon en large*/
+
+#largePokemonImage{
+	display: none;
+	position: fixed; 
+	top: 30%;
+	left: 70%;
+	width: 450px;
+	height: 450px;
+	background-color: white;
+	border: 5px #98002e solid;
+	padding: 15px;
+	border-radius: 15px;
+}
+
+
+
+
+
+.contenu{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pageInfo{
+    min-width: max-content;
+    margin: 0 10px 0 10px;
+}
+
+.pagi{
+    display:flex;
+    align-items: center;
+}
+
+
+/* CSS boutons */
+.button-28, #closeDetails {
+  appearance: none;
+  background-color: white;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover, #closeDetails:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+#closeDetails{
+	width: 45%;
+}
+
+/*CSS table */
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+	text-align:center;
+    background-color: #98002e;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+th,td {
+    padding: 12px 15px;
+}
+
+ tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+ tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+tbody tr:nth-of-type(odd) {
+    background-color: white;
+}
+
+tbody tr:hover{
+    background-color: #e0e0e0;
+}
+
+#pokemonDetails {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position:absolute;
+    left: 18%;
+
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    padding: 20px;
+    border: 5px solid #98002e;
+    z-index: 9999;
+    border-radius: 15px;
+}
+
+#pokemonDetails img {
+    width: 30%; 
+}
+
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5); 
+	display: none; 
+	z-index: 1; 
+ }
+
+ .filters{
+    display : flex;
+ }
+
+.parametre_filtre{
+    width: 220px;
+    margin-left: 10px;
+    display : flex; 
+    flex-direction: column;
+}
+
+select{
+    
+    font-size: 14px;
+    border-radius: 6px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+    border: 2px solid #dee1e2;
+    color: rgb(14, 14, 16);
+    display: block;
+    height: 36px;
+    :hover {
+        border-color: #ccc;
+    }
+    :focus{
+        border-color: #9147ff;
+        background: #fff;
+    }
+    
+}
+
+
+
+
+ #name{
+    
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 14px;
+    vertical-align: baseline;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: .16px;
+    border-radius: 0;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #8d8d8d;
+    background-color: #f4f4f4;
+    padding: 0 16px;
+    color: #161616;
+    transition: background-color 70ms cubic-bezier(.2,0,.38,.9),outline 70ms cubic-bezier(.2,0,.38,.9);  
+    :focus{
+        outline: 2px solid #0f62fe;
+        outline-offset: -2px;
+    }
+
+ }
+ 
+.nom-type{
+	display: flex;
+	justify-content: space-between;
+} 
+
+.info-pokemon{
+	display: flex;
+	justify-content: space-around;
+}
+ 
+ .detail-section{
+	margin: 20px 0 20px 0;
+	padding: 15px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+ }
+ 
+.stats-section{
+	display: flex;
+	flex-direction: column;
+}
+
+.move-section{
+	display: flex;
+	text-align: center;
+}
+
+.pokemon_type{
+	display: flex; 
+	flex-direction: column;
+	width:160px;
+	align-items: center;
+	height:130px;
+	justify-content: space-evenly;
+}
+
+.type-section{
+	width: 32%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.type,.type-detail{
+	font-family: 'Helvetica';
+	color: white;
+	width: 35%;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+.type-detail{
+	display: block;
+	width: 50px;
+	padding: 9px;
+}
+
+.fast_moves{
+	margin-left: 15px;
+}
+
+.Bug {
+    background: #92BC2C;
+}
+
+.Dark {
+	color: white;
+    background: #595761;
+}
+
+.Dragon {
+    background: #0C69C8;
+}
+
+.Electric {
+    background: #F2D94E;
+}
+
+.Fire {
+    background: #FBA54C;
+}
+
+.Fairy {
+    background: #EE90E6;
+}
+
+.Fighting {
+    background: #D3425F;
+}
+
+.Flying {
+    background: #A1BBEC;
+}
+
+.Ghost {
+    background: #5F6DBC;
+}
+
+.Grass {
+    background: #5FBD58;
+}
+
+.Ground {
+    background: #DA7C4D;
+}
+
+.Ice {
+    background: #75D0C1;
+}
+
+.Normal {
+    background: #A0A29F;
+}
+
+.Poison {
+    background: #B763CF;
+}
+
+.Psychic {
+    background: #FA8581;
+}
+
+.Rock {
+    background: #C9BB8A;
+}
+
+.Steel {
+    background: #5695A3;
+}
+
+.Water {
+    background: #539DDF;
+}
+
+.sorted{
+    background-color: #13ab22;
+    font-weight: bold;
+}

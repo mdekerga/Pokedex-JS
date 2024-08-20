@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Tri</title>
+</head>
+<body>
+    <div id="overlay"></div>
+    <div class="bg"></div>
+    <div class="contenu">
+		
+		<img src="../css/pokemon-23.svg" id="logo">
+        <div class="filters">
+            <div class="parametre_filtre">
+                <select id="generation">
+                    <!-- Les options seront ajoutées dynamiquement via JavaScript -->
+                </select>
+            </div>
+
+            <div class="parametre_filtre">
+                <select id="type">
+                    <!-- Les options seront ajoutées dynamiquement via JavaScript -->
+                </select>
+            </div>
+
+            
+            <div class="parametre_filtre">
+                <input type="text" id="name" placeholder="Nom">
+            </div>
+            
+        </div>
+        <table>
+            <thead>
+                <tr>
+					<th class="sortable" id="pokemon_idHeader">ID</th>
+					<th class="sortable" id="pokemon_nameHeader">NOM</th>
+					<th class="sortable" id="poke_genHeader">GEN</th>
+					<th class="sortable" id="typeHeader">TYPE</th>
+					<th class="sortable" id="base_attackHeader">END</th>
+					<th class="sortable" id="base_defenseHeader">ATT</th>
+					<th class="sortable" id="base_staminaHeader">DEF</th>
+                    <td>URL</td>
+                </tr>
+            </thead>
+
+            <tbody>
+            
+            </tbody>
+
+
+            
+        </table>
+    <div class="pagi">
+        <button class="button-28" role="button" id="prevButton">PREC</button>
+        <span id="pageInfo"></span>
+        <button class="button-28" role="button" id="nextButton">SUIV</button>
+    </div>
+</div>
+<div id="largePokemonImageContainer">
+    <img id="largePokemonImage" alt="Large Pokemon Image">
+</div>
+<div id="pokemonDetails" class="pokemon-details">
+    <div id="detailsContent"></div>
+    <div class="close-btn" id="closeDetails">X</div>
+</div>
+</body>
+<script type="text/javascript" src="../data/class_attack.js"></script>
+<script type="text/javascript" src="../data/pokemons.js"></script>
+<script type="text/javascript" src="../data/generation.js"></script>
+<script type="text/javascript" src="../data/pokemon_type.js"></script>
+<script type="text/javascript" src="../data/pokemon_moves.js"></script>
+<script type="text/javascript" src="../data/charged_moves.js"></script>
+<script type="text/javascript" src="../data/fast_moves.js"></script>
+<script type="text/javascript" src="script_v5.js"></script>
+</html>

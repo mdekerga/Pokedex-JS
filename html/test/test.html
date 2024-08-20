@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tests</h1>
+
+    <label for="argument">Type:</label>
+    <input type="text" id="type">
+
+    <label for="attack">Attack:</label>
+    <input type="text" id="attack">
+
+    <label for="pokemon">Pokemon</label>
+    <input type="text" id="pokemon">
+
+    <ul>
+        <li><a href="#" onclick="console.table(getPokemonsByType(document.getElementById('type').value))">Test getPokemonsByType</a></li>
+        <li><a href="#" onclick="console.table(getPokemonsByAttack(document.getElementById('attack').value))">Test getPokemonsByAttack</a></li>
+        <li><a href="#" onclick="console.table(getAttacksByType(document.getElementById('type').value))">Test getAttacksByType</a></li>
+        <li><a href="#" onclick="console.table(sortPokemonByName())">Test sortPokemonByName</a></li>
+        <li><a href="#" onclick="console.table(sortPokemonByStamina())">Test sortPokemonByStamina</a></li>
+        <li><a href="#" onclick="console.table(getWeakestEnemies(document.getElementById('attack').value))">Test getWeakestEnemies</a></li>
+        <li><a href="#" onclick="console.table(getBestAttackTypesForEnemy(document.getElementById('pokemon').value))">Test getBestAttackTypesForEnemy</a></li>
+    </ul>
+    
+    
+<script src="./test.js"></script>
+<script src="../data/pokemons.js"></script>
+<script src="../data/fast_moves.js"></script>
+<script src="../data/pokemon_type.js"></script>
+<script src="../data/charged_moves.js"></script>
+<script src="../data/cp_multiplier.js"></script>
+<script src="../data/type_effectiveness.js"></script>
+<script src="../data/class_attack.js"></script>
+<script src="../data/class_pokemon.js"></script>
+<script src="../data/class_type.js"></script>
+<script src="../data/pokemon_moves.js"></script>
+
+</body>
+<script>
+    let t1 = new Type()
+    t1.import_type()
+
+    let a1 = new Attack()
+    a1.import_attacks()
+
+     let p1 = new Pokemon()
+     p1.import_pokemon()
+
+
+</script>
+</html>
+
